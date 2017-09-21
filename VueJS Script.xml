@@ -1,0 +1,102 @@
+<templateSet group="VueJS Script">
+  <template name="vdata" value="data() {&#10;    return {&#10;        $KEY$: $VALUE$&#10;    }&#10;},$END$" description="Component data as a function" toReformat="false" toShortenFQNames="true">
+    <variable name="KEY" expression="" defaultValue="&quot;key&quot;" alwaysStopAt="true" />
+    <variable name="VALUE" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vbase" value="&lt;template&gt;&#10;    &lt;div&gt;&#10;&#10;    &lt;/div&gt;&#10;&lt;/template&gt;&#10;&#10;&lt;script&gt;&#10;    export default {&#10;        $END$&#10;    }&#10;&lt;/script&gt;&#10;&#10;&lt;style scoped&gt;&#10;&#10;&lt;/style&gt;" description="Single file component base" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vmethod" value="methods: {&#10;    $NAME$() {&#10;        $END$&#10;    }&#10;}," description="Vue method" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vcomputed" value="computed: {&#10;    $NAME$() {&#10;        return this.$PROPERTY$ &#10;    }&#10;}," description="Vue computed property" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="PROPERTY" expression="" defaultValue="&quot;data&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vwatcher" value="watch: {&#10;    data($newValue$, $oldValue$) {&#10;        $END$        &#10;    }&#10;}," description="Vue watcher with new and old value args" toReformat="false" toShortenFQNames="true">
+    <variable name="newValue" expression="" defaultValue="&quot;newValue&quot;" alwaysStopAt="true" />
+    <variable name="oldValue" expression="" defaultValue="&quot;oldValue&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vprop" value="props: {&#10;    $propName$: {&#10;        type: $number$,&#10;        default: $END$&#10;    },&#10;}," description="Props with type and default" toReformat="false" toShortenFQNames="true">
+    <variable name="propName" expression="" defaultValue="&quot;propName&quot;" alwaysStopAt="true" />
+    <variable name="number" expression="" defaultValue="&quot;Number&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vimport" value="import $NAME$ from './components/$NAME$.vue';" description="Import one component into another" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;New&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vimport-c" value="components: {&#10;    $New$,&#10;}," description="Import one component into another within the export statement" toReformat="false" toShortenFQNames="true">
+    <variable name="New" expression="" defaultValue="&quot;New&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vimport-export" value="import $NAME$ from '~components/$NAME$.vue'&#10;    &#10;export default {&#10;    components: {&#10;        $NAME$&#10;    },&#10;}" description="Import one component into another and use it within the export statement" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vfilter" value="filters: {&#10;    $fnName$: function($value$) {&#10;        return $value$;$END$&#10;    }&#10;}," description="Vue filter" toReformat="false" toShortenFQNames="true">
+    <variable name="fnName" expression="" defaultValue="&quot;fnName&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vmixin" value="const $mixinName$ = {&#10;    mounted() {&#10;        console.log('hello from mixin!')&#10;    },&#10;}" description="Create a Vue Mixin" toReformat="false" toShortenFQNames="true">
+    <variable name="mixinName" expression="" defaultValue="&quot;mixingName&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vmixin-use" value="mixins: [$mixinName$]," description="Bring a mixin into a component to use" toReformat="false" toShortenFQNames="true">
+    <variable name="mixinName" expression="" defaultValue="&quot;mixinName&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vc-direct" value="Vue.directive('$directiveName$', {&#10;    bind(el, binding, vnode) {&#10;        el.style.$arg$ = binding.value.$arg$;&#10;    }&#10;});" description="Vue create a custom directive" toReformat="false" toShortenFQNames="true">
+    <variable name="directiveName" expression="" defaultValue="&quot;directiveName&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vimport-lib" value="import { $libName$ } from '$libName$'" description="Import a library" toReformat="false" toShortenFQNames="true">
+    <variable name="libName" expression="" defaultValue="&quot;libName&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vimport-gsap" value="import { TimelineMax, $Ease$ } from 'gsap'" description="Import GreenSock with Timeline and Eases" toReformat="false" toShortenFQNames="true">
+    <variable name="Ease" expression="" defaultValue="&quot;Ease&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vanimhook-js" value="methods: {&#10;    beforeEnter(el) {&#10;        console.log('beforeEnter');&#10;    },&#10;    enter(el, done) {&#10;        console.log('enter');&#10;        done();&#10;    },&#10;    beforeLeave(el) {&#10;        console.log('beforeLeave');&#10;    },&#10;    leave(el, done) {&#10;        console.log('leave');&#10;        done();&#10;    },&#10;}," description="Using the Transition component JS hooks in methods" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

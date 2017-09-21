@@ -1,0 +1,35 @@
+<templateSet group="VueJS Store">
+  <template name="vstore" value="import Vue from 'vue';&#10;import Vuex from 'vuex';&#10;&#10;Vue.use(Vuex);&#10;&#10;export const store = new Vuex.Store({&#10;    state: {&#10;        $key$: $value$&#10;    },&#10;});" description="Base for Vuex store.js" toReformat="false" toShortenFQNames="true">
+    <variable name="key" expression="" defaultValue="&quot;key&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vgetters" value="getters: {&#10;    value: $value$ =&gt; {&#10;        return state.$value$;&#10;    }&#10;}," description="Vuex Getter" toReformat="false" toShortenFQNames="true">
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vmutation" value="mutations: {&#10;    $updateValue$(state, $payload$) {&#10;        state.$value$ = $payload$;&#10;    }&#10;}," description="Vuex Mutation" toReformat="false" toShortenFQNames="true">
+    <variable name="updateValue" expression="" defaultValue="&quot;updateValue&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <variable name="payload" expression="" defaultValue="&quot;payload&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vactions" value="actions: {&#10;    $updateValue$({commit}, $payload$) {&#10;        commit($updateValue$, $payload$);&#10;    }&#10;}," description="Vuex Action" toReformat="false" toShortenFQNames="true">
+    <variable name="updateValue" expression="" defaultValue="&quot;updateValue&quot;" alwaysStopAt="true" />
+    <variable name="payload" expression="" defaultValue="&quot;payload&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="vstore-import" value="import { store } from './store/store';" description="Import vuex store into main.js" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
